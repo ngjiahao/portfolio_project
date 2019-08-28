@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+{% block 'title' %}
+<title>Ng Jia Hao | Portfolio</title>
+{% endblock %}
+
+{% block 'body' %}
+{% load static %}
+
+      <section class="jumbotron text-center" style="background-color: #e1fafa">
+        <div class="container">
+          <h1 class="jumbotron-heading">Ng Jia Hao</h1>
+          <p class="lead text-muted">An engineer who is passionate on coding.<br>
+              Currently a Software Engineer (DevOps) at Dyson.<br>
+              Was previously a Senior SSD Product Validation Engineer at Micron.<br>
+              Experienced in Python and SSD Validation.</p>
+          <p>
+            <a href="mailto: ngjiahao@hotmail.com" class="btn btn-primary my-2">Email Me</a>
+          </p>
+        </div>
+      </section>
+
+      <div class="album py-5 bg-light">
+        <div class="container">
+
+          <div class="row">
+            <div class="col-md-4">
+                <a href="{% url 'employment' %}">
+                  <div class="card mb-4 box-shadow">
+                    <img class="card-img-top" src="{% static 'employment.jpg' %}" alt="Card image cap">
+                    <div class="card-body">
+                      <p class="card-text" style="text-align:center">Current and Past Employment</p>
+                    </div>
+                  </div>
+                </a>
+            </div>
+
+            <div class="col-md-4">
+                <a href="{% url 'education' %}">
+                  <div class="card mb-4 box-shadow">
+                    <img class="card-img-top" src="{% static 'education.jpg' %}" alt="Card image cap">
+                    <div class="card-body">
+                      <p class="card-text" style="text-align:center">Education History</p>
+                    </div>
+                  </div>
+                </a>
+            </div>
+
+            <div class="col-md-4">
+                <a href="{% url 'tech_experience' %}">
+                  <div class="card mb-4 box-shadow">
+                    <img class="card-img-top" src="{% static 'technical.jpg' %}" alt="Card image cap">
+                    <div class="card-body">
+                      <p class="card-text" style="text-align:center">Technical Experience</p>
+                    </div>
+                  </div>
+                </a>
+            </div>
+
+            <div class="col-md-4">
+                <a href="{% url 'add_experience' %}">
+                  <div class="card mb-4 box-shadow">
+                    <img class="card-img-top" src="{% static 'experience.jpg' %}" alt="Card image cap">
+                    <div class="card-body">
+                      <p class="card-text" style="text-align:center">Additional Experience & Awards</p>
+                    </div>
+                  </div>
+                </a>
+            </div>
+
+            <div class="col-md-4">
+                <a href="{% url 'language' %}">
+                  <div class="card mb-4 box-shadow">
+                    <img class="card-img-top" src="{% static 'language.png' %}" alt="Card image cap">
+                    <div class="card-body">
+                      <p class="card-text" style="text-align:center">Language</p>
+                    </div>
+                  </div>
+                </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  <section class="jumbotron" style="background-color: #e1fafa">
+    <div class="container">
+    <h2 align="center">What do you think about Jia Hao?</h2>
+    <h4 align="center">Please give your valuable feedback!</h4>
+        <br>
+    <form action="{% url 'home' %}" method="post">
+        {% csrf_token %}
+        {% for form in feedback %}
+        <div class="form-group">
+            <label for="{{ form.id_for_label }}" style="font-weight:bold">{{ form.label }}</label>
+            {{ form }}
+            {% for error in form.errors %}
+              <span class="help-block">{{ error }}</span>
+            {% endfor %}
+        </div>
+        {% endfor %}
+
+        <input type="submit" value="Submit">
+
+        {% if note %}
+        <h2>{{ note }}</h2>
+        {% endif %}
+    </form>
+    </div>
+  </section>
+
+{% endblock %}

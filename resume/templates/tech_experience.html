@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+
+{% block 'title' %}
+<title>Ng Jia Hao | Technical Experience</title>
+{% endblock %}
+
+{% block 'body' %}
+{% load static %}
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <section class="jumbotron text-center" style="background-color: #e1fafa">
+        <div class="container">
+          <h1 class="jumbotron-heading">Technical Experience</h1>
+          <p class="lead text-muted">All about development</p>
+        </div>
+      </section>
+
+
+      <!-- Marketing messaging and featurettes
+      ================================================== -->
+      <!-- Wrap the rest of the page in another container to center all the content. -->
+
+      <div class="container marketing">
+
+        <!-- START THE FEATURETTES -->
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading">Programming <span class="text-muted" style='font-size: small;'></span></h2>
+            <p class="lead">Python 2 & 3 [Aug 2013 - Present]</p>
+            <p class="small">> Deliver software solution by realizing internal customer’s needs in Python
+                <br>> Experience in ‘request’ modules of Python, used to invoke REST APIs
+                <br>> Unit Test development, including ‘mock’ module
+                <br>> Development in macOS environment
+                <br>> Write test scripts/library in Python
+                <br>> Automate manual job (repetitive tests, data parsing from logs/raw data) using Python </p>
+            <p class="lead">Drivemate/Drivemaster programming [Aug 2013 – Aug 2015]</p>
+            <p class="lead">C++ [in revision]</p>
+            <p class="lead">Java [beginner] </p>
+            <p class="lead">IDEs</p>
+            <p class="small">> Python: Eclipse (Intermediate), Pycharm (Intermediate)
+                <br>> C: Source Insight (Beginner)  </p>
+          </div>
+          <div class="col-md-5">
+            <img class="featurette-image img-fluid mx-auto" src="{% static 'software.jpg' %}" alt="software" style="width:500px;height:350px;">
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading">DevOps <span class="text-muted" style='font-size: small;'>Development and Operation</span></h2>
+            <p class="lead">Atlassian (JIRA, Confluence, Bitbucket) [Sept 2015 – Present]</p>
+            <p class="small">> Daily interaction, as user
+                <br>> Deliver software solution to interact with the tools, as software developer </p>
+            <p class="lead">Jenkins [Aug 2013 – Feb 2019]</p>
+              <p class="small">> Using Python, retrieve latest commit on “branch” in Pull Request on Bitbucket via REST API, execute tests to check stability of code changes  </p>
+            <p class="lead">Bamboo [Feb 2019 – Present] </p>
+            <p class="small">> Create ‘build’ to implement code health monitoring system</p>
+          </div>
+          <div class="col-md-5 order-md-1">
+            <img class="featurette-image img-fluid mx-auto" src="{% static 'devops.png' %}" alt="devops" style="width:500px;height:250px;">
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+      <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Source Version Control <span class="text-muted" style='font-size: small;'></span></h2>
+        <p class="lead">SVN [Aug 2013 – Oct 2015]</p>
+        <p class="lead">Git [Oct 2015 – Present] </p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <img class="featurette-image img-fluid mx-auto" src="{% static 'version_control.png' %}" alt="version_control" style="width:300px;height:300px;">
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+      <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">Solid State Drives <span class="text-muted" style='font-size: small;'>SSD</span></h2>
+        <p class="lead">Storage Protocols</p>
+        <p class="small">> ATA & Serial ATA Protocols [Aug 2013 – Sept 2015]
+            <br>> PCIe & NVMe Protocols [Sept 2015 – Present]  </p>
+        <p class="lead">Firmware Feature</p>
+          <p class="small">> Asynchronous Power Loss feature
+              <br>> MAG (NAND) Features </p>
+        <p class="lead">Analyze and transform Customer’s requirement into test scripts </p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <img class="featurette-image img-fluid mx-auto" src="{% static 'ssd.png' %}" alt="ssd" style="width:500px;height:350px;">
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+        <!-- /END THE FEATURETTES -->
+
+      </div><!-- /.container -->
+    </div>
+
+{% endblock %}

@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+
+{% block 'title' %}
+<title>Ng Jia Hao | Employment</title>
+{% endblock %}
+
+{% block 'body' %}
+{% load static %}
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <section class="jumbotron text-center" style="background-color: #e1fafa">
+        <div class="container">
+          <h1 class="jumbotron-heading">Employment History</h1>
+          <p class="lead text-muted">2019 - Current Year</p>
+        </div>
+      </section>
+
+
+      <!-- Marketing messaging and featurettes
+      ================================================== -->
+      <!-- Wrap the rest of the page in another container to center all the content. -->
+
+      <div class="container marketing">
+
+        <!-- START THE FEATURETTES -->
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading">Software Engineer (DevOps) <span class="text-muted" style='font-size: small;'>[Feb '19 - Present]</span></h2>
+              <h4><span class="text-muted">Dyson Manufacturing Sdn Bhd </span></h4>
+            <p class="lead">Develop software to internal Functional Team</p>
+            <p class="small">> Develop software that manages access to Atlassian Tools, e.g. JIRA, Confluence, Bitbucket
+              <br>> Created repo from scratch that host codes to interact with Atlassian Tool, via REST APIs
+              <br>> Unit Test development</p>
+            <p class="lead">Software maintainer and consultant of an internal code health monitoring system</p>
+            <p class="small">> Set up Bamboo Build for Functional Team to utilize the code health monitoring system
+              <br>> Resolve bugs and provide enhancement to the software
+            <p class="lead">Consultant of Bamboo for SEA Region</p>
+            <p class="lead">Software maintainer and consultant of Artifactory </p>
+            <p class="lead">Practises Scaled Agile Framework (SAFe) </p>
+          </div>
+          <div class="col-md-5">
+            <img class="featurette-image img-fluid mx-auto" src="{% static 'dyson.png' %}" alt="dyson" style="width:500px;height:350px;">
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading">Senior Engineer – SSD Validation <span class="text-muted" style='font-size: small;'>[May '17 - Feb '19]</span></h2>
+            <h2 class="featurette-heading">Engineer – SSD Validation <span class="text-muted" style='font-size: small;'>[Aug '13 - Apr '17]</span></h2>
+              <h4><span class="text-muted">Micron Semiconductor Asia Pte Ltd</span></h4>
+            <p class="lead">Team Lead of Solid State Drive (SSD) firmware validation</p>
+            <p class="lead">Test plan design </p>
+            <p class="lead">Create test scripts based on SATA/ATA/PCIe/NVMe/SSD Firmware Feature specification (L2 Tests)</p>
+            <p class="lead">Create utility scripts and automation to facilitate firmware validation process </p>
+            <p class="lead">Site Representative of Test Script Base Management</p>
+            <p class="small">> Drive and perform test scripts code review
+              <br>> Involved in setting up and maintaining Continuous Integration (CI) via Jenkins
+              <br>> Propose and enhance process flow of test case issue resolving or development, CI, and test script base infrastructure</p>
+            <p class="lead">Execute firmware validation and perform failure analysis on firmware bugs/drive defects </p>
+            <p class="lead">Document process flow and test manuals via Confluence for better collaboration </p>
+            <p class="lead">Create Firmware Test according to specific Firmware Design & Feature (L1 Tests)</p>
+          </div>
+          <div class="col-md-5 order-md-1">
+            <img class="featurette-image img-fluid mx-auto" src="{% static 'micron.png' %}" alt="micron" style="width:500px;height:500px;">
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <!-- /END THE FEATURETTES -->
+
+      </div><!-- /.container -->
+    </div>
+
+{% endblock %}

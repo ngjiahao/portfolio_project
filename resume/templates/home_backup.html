@@ -1,0 +1,20 @@
+<h1>NG JIA HAO</h1>
+
+
+<div><a href="{% url 'employment' %}">Employment</a></div>
+<div><a href="{% url 'education' %}">Education</a></div>
+<div><a href="{% url 'tech_experience' %}">Technical Experience</a></div>
+<div><a href="{% url 'add_experience' %}">Additional Experience and Awards</a></div>
+<div><a href="{% url 'language' %}">Language</a></div>
+
+<h2>What do you think about Jia Hao? Please give your valuable feedback!</h2>
+<form action="{% url 'home' %}" method="post">
+    {% csrf_token %}
+    {{ feedback.as_p }}
+    <input type="submit" value="Submit">
+
+    {% if note %}
+    <h2>{{ note }}</h2>
+    {% endif %}
+
+</form>

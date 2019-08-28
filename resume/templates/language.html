@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block 'title' %}
+<title>Ng Jia Hao | Language</title>
+{% endblock %}
+
+{% block 'body' %}
+{% load static %}
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <section class="jumbotron text-center" style="background-color: #e1fafa">
+        <div class="container">
+          <h1 class="jumbotron-heading">Language</h1>
+          <p class="lead text-muted">Written and Spoken Language</p>
+        </div>
+      </section>
+
+
+      <!-- Marketing messaging and featurettes
+      ================================================== -->
+      <!-- Wrap the rest of the page in another container to center all the content. -->
+
+      <div class="container marketing">
+
+        <!-- START THE FEATURETTES -->
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading">English<span class="text-muted" style='font-size: small;'></span></h2>
+            <p class="lead">Spoken: Proficient </p>
+            <p class="lead">Written: Proficient </p>
+          </div>
+          <div class="col-md-5">
+            <img class="featurette-image img-fluid mx-auto" src="{% static 'english.jpg' %}" alt="english" style="width:500px;height:350px;">
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading">Chinese <span class="text-muted" style='font-size: small;'>and Mandarin</span></h2>
+            <p class="lead">Spoken: Proficient (Native) </p>
+            <p class="lead">Written: Proficient (Native) </p>
+          </div>
+          <div class="col-md-5 order-md-1">
+            <img class="featurette-image img-fluid mx-auto" src="{% static 'mandarin.jpg' %}" alt="mandarin" style="width:500px;height:300px;">
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+      <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Malay <span class="text-muted" style='font-size: small;'></span></h2>
+        <p class="lead">Spoken: Proficient</p>
+            <p class="lead">Written: Proficient</p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <img class="featurette-image img-fluid mx-auto" src="{% static 'malay.png' %}" alt="malay" style="width:500px;height:200px;">
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+        <!-- /END THE FEATURETTES -->
+
+      </div><!-- /.container -->
+    </div>
+
+{% endblock %}

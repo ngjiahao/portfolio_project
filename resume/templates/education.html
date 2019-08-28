@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block 'title' %}
+<title>Ng Jia Hao | Education</title>
+{% endblock %}
+
+{% block 'body' %}
+{% load static %}
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <section class="jumbotron text-center" style="background-color: #e1fafa">
+        <div class="container">
+          <h1 class="jumbotron-heading">Education</h1>
+          <p class="lead text-muted">My education path</p>
+        </div>
+      </section>
+
+
+      <!-- Marketing messaging and featurettes
+      ================================================== -->
+      <!-- Wrap the rest of the page in another container to center all the content. -->
+
+      <div class="container marketing">
+
+        <!-- START THE FEATURETTES -->
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading">Bachelor of Engineering (Electrical) <span class="text-muted" style='font-size: small;'>[2009 - 2013]</span></h2>
+              <h4><span class="text-muted">University of Malaya </span></h4>
+            <p class="lead">CGPA: 3.42 (out of 4.00)</p>
+          </div>
+          <div class="col-md-5">
+            <img class="featurette-image img-fluid mx-auto" src="{% static 'universiti_malaya.png' %}" alt="umalaya" style="width:500px;height:250px;">
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <!-- /END THE FEATURETTES -->
+
+      </div><!-- /.container -->
+    </div>
+
+{% endblock %}

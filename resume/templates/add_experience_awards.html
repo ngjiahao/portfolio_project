@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+
+{% block 'title' %}
+<title>Ng Jia Hao | Experience & Awards</title>
+{% endblock %}
+
+{% block 'body' %}
+{% load static %}
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <section class="jumbotron text-center" style="background-color: #e1fafa">
+        <div class="container">
+          <h1 class="jumbotron-heading">Additional Experience, Awards and Achievement</h1>
+          <p class="lead text-muted">Softskills and awards</p>
+        </div>
+      </section>
+
+
+      <!-- Marketing messaging and featurettes
+      ================================================== -->
+      <!-- Wrap the rest of the page in another container to center all the content. -->
+
+      <div class="container marketing">
+
+        <!-- START THE FEATURETTES -->
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading">Interaction with people from different part of the whole <span class="text-muted" style='font-size: small;'></span></h2>
+            <p class="lead">Worked with team in Micron Shanghai </p>
+            <p class="small">> [Aug 2014]: Support L1 Validation from coverage on L2
+                <br>> [May 2017]: Provide basic NVMe and Test Architecture Training
+                <br>> [Apr 2018]: L1 Validation transfer of SSD Feature from Singapore’s Team to Shanghai’s Team </p>
+            <p class="lead">Worked with Silicon Motion Taiwan [2015 & April 2016]</p>
+            <p class="small">> Support Firmware Bug resolving on-site by reproducing FW Bugs using test scripts </p>
+            <p class="lead">Worked with team in Micron Boise </p>
+            <p class="small">> [Sept – Dec 2015]: Receive training on PCIe & NVMe Protocols and associated validation skills to bring up a team in Singapore to handle PCIe/NVMe SSD products
+              <br>> [Nov – Dec 2017]: Support L1 Validation by working closely with SSD Firmware Developer </p>
+          </div>
+          <div class="col-md-5">
+            <img class="featurette-image img-fluid mx-auto" src="{% static 'global.jpg' %}" alt="global" style="width:500px;height:350px;">
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading">Awards & Achievement <span class="text-muted" style='font-size: small;'></span></h2>
+            <p class="lead">SPOT Bonus by Micron Semiconductor Asia [2015]</p>
+            <p class="lead">Written 2 Technical Papers in Micron Semiconductor Asia [2015 & 2016]: Accepted and Published</p>
+          </div>
+          <div class="col-md-5 order-md-1">
+            <img class="featurette-image img-fluid mx-auto" src="{% static 'achievement.jpg' %}" alt="achievement" style="width:250px;height:300px;">
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+      <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Training <span class="text-muted" style='font-size: small;'></span></h2>
+        <p class="lead">Bamboo Training in the UK by Automation Consultant </p>
+        <p class="lead">Self-paced learning </p>
+        <p class="small">> Udemy (beginner, in progress): Java, C++, AGILE, MySQL
+          <br>> edX (beginner, in progress): Microcontroller
+          <br>> LinkedIn Learning (beginner, in progress): Machine Learning, Django </p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <img class="featurette-image img-fluid mx-auto" src="{% static 'trainning.png' %}" alt="trainning" style="width:500px;height:350px;">
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+        <!-- /END THE FEATURETTES -->
+
+      </div><!-- /.container -->
+    </div>
+
+{% endblock %}
